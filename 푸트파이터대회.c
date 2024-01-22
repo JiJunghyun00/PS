@@ -15,16 +15,16 @@ char* solution(int food[], size_t food_len) {
     for (int i = 1;i < food_len;i++) {
         answerlen += food[i];
     }
+    answer[answerlen / 2] = '0';
     int i = 0;
     int j = 0;
     int check = 0;
     for (i = 1;i < food_len;i++) {
         for (j = check;j < (check + (food[i] / 2));j++) {
             answer[j] = (i + '0');
+            answer[answerlen - (j + 1)] = (i + '0');
         }
         check = j;
     }
-    //check++;
-    //answer[check]='0';
     return answer;
 }
