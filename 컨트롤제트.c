@@ -15,9 +15,6 @@ int solution(const char* s) {
             if (i == 1) {
                 sum = 0;
             }
-            else if (s[i - 2] == 'Z') {
-                continue;
-            }
             else {
                 sum -= temp; // 'Z'가 나오면 이전에 더한 숫자를 빼줍니다.
             }
