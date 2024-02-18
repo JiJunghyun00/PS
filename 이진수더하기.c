@@ -7,7 +7,8 @@ char* solution(const char* bin1, const char* bin2) {
     // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
     char* result = (char*)malloc(10000000);
     int check = 0;
-    for (int i = 0;i < strlen(bin1);i++) {
+
+    for (int i = strlen(bin1) - 1;i > 0;i++) {
         if (check == 1) {
             if (bin1[i] == '1' && bin2[i] == '1') {
 
