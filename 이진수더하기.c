@@ -8,7 +8,7 @@ char* solution(const char* bin1, const char* bin2) {
     char* result = (char*)malloc(10000000);
     int check = 0;
 
-    for (int i = strlen(bin1) - 1;i > 0;i++) {
+    for (int i = strlen(bin1) - 1;i >= 0;i--) {
         if (check == 1) {
             if (bin1[i] == '1' && bin2[i] == '1') {
 
