@@ -6,6 +6,7 @@
 char* solution(const char* bin1, const char* bin2) {
     // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
     char* result = (char*)malloc(10000000);
+    char* result2 = result;
     int check = 0;
 
     for (int i = strlen(bin1) - 1;i >= 0;i--) {
@@ -15,7 +16,7 @@ char* solution(const char* bin1, const char* bin2) {
                 result[i] = '1';
             }
             else if (bin1[i] == '1' || bin2[i] == '1') {
-                result[i] = '1';
+                result[i] = '0';
             }
             else {
                 result[i] = '1';
@@ -33,6 +34,14 @@ char* solution(const char* bin1, const char* bin2) {
             else {
                 result[i] = '0';
             }
+        }
+    }
+    if (result[0] == '0') {
+        char* result = (char*)malloc(10000000);
+        result[0] = '1';
+        char temp;
+        for (int i = strlen(bin1);i > 0;i--) {
+            result[i] = result2[i - 1];
         }
     }
     return result;
