@@ -37,7 +37,7 @@ char* solution(const char* bin1, const char* bin2) {
         }
     }
     if (result[0] == '0') {
-        char* result = (char*)malloc(10000000);
+        
         result[0] = '1';
         char temp;
         for (int i = strlen(bin1);i > 0;i--) {
